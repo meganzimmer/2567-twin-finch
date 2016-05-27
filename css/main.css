@@ -115,10 +115,31 @@ input {
 }
 /*--------1.5 Lists-----------*/
 
+#facebook {
+	background: url(../img/facebook-sprite.png) no-repeat;
+	width: 33px;
+	height: 32px;
+}
+
+#twitter {
+	background: url(../img/twitter-sprite.png) no-repeat;
+	width: 33px;
+	height: 32px;
+}
+
+#google-plus {
+	background: url(../img/google-sprite.png) no-repeat;
+	width: 33px;
+	height: 32px;
+}
+
+nav li, #facebook, #twitter, #google-plus, #connect ul {
+	display: inline-block;
+}
+
 /*-----------------------2.0 NAVIGATION MENU-------------------------*/
 
 nav li {
-	display: inline-block;
 	margin: 110px 40px 0 0;
 }
 nav li:first-child {
