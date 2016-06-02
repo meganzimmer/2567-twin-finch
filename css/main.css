@@ -58,21 +58,16 @@ p, h3, nav {
 	font-size: 3rem;
 	font-family: 'Unkempt', cursive;
 }
-h3, h2 {
-	color: #b1d144;
-	font-weight: 600;
-}
 h4 {
-	font-weight: 600;
 	font-size: 1.1rem;
 	padding-top: 75px;
 }
+h2, h3, h4 {
+	font-weight: 600;
+}
 /*--------1.2 Body Copy-----------*/
 
-#hero span, blockquote p, blockquote a {
-	color: #8da382;
-}
-#hero span, h4 {
+#hero span, h4, #hero a, #products a {
 	text-transform: uppercase;
 }
 blockquote p {
@@ -84,26 +79,32 @@ blockquote p, blockquote a, #shipping {
 }
 .origin {
 	font-weight: 700;
+	margin-bottom: 25px;
 }
 #shipping {
 	line-height: 2rem;
-	font-weight: 300;
-	margin: 0 auto;
+	text-align: center;
+	margin-top: 50px;
 }
 #about p {
 	line-height: 2.2rem;
 }
-nav li, .origin, #about span {
-	font-size: .8rem;
-	line-height: 1rem;
-}
-nav a, p, h4 {
-	color: #4d4c4c;
-}
-#hero span, blockquote p {
-	font-size: 3.3rem;
+#hero a, #shipping {
+	font-weight: 300;
 }
 /*--------1.3 Buttons----------*/
+
+#hero a, #products a {
+	border: 1px solid #00987e;
+	padding: 5px 20px;
+}
+#hero a:hover, #products a:hover {
+	color: #fff;
+	background-color: #00987e;
+}
+#hero a {
+	margin-top: 25px;
+}
 /*--------1.4 Forms-----------*/
 
 label {
@@ -117,30 +118,28 @@ input {
 
 #facebook {
 	background: url(../img/facebook-sprite.png) no-repeat;
-	width: 33px;
-	height: 32px;
 }
-
 #twitter {
 	background: url(../img/twitter-sprite.png) no-repeat;
-	width: 33px;
-	height: 32px;
 }
-
 #google-plus {
 	background: url(../img/google-sprite.png) no-repeat;
+}
+#facebook, #twitter, #google-plus {
 	width: 33px;
 	height: 32px;
 }
-
-nav li, #facebook, #twitter, #google-plus, #connect ul {
+#facebook:hover, #twitter:hover, #google-plus:hover {
+	background-position: 0 -32px;
+}
+nav li, #facebook, #twitter, #google-plus, #connect li, a {
 	display: inline-block;
 }
 
 /*-----------------------2.0 NAVIGATION MENU-------------------------*/
 
 nav li {
-	margin: 110px 40px 0 0;
+	margin: 80px 40px 0 0;
 }
 nav li:first-child {
 	margin-left: 120px;
@@ -148,7 +147,7 @@ nav li:first-child {
 nav a:hover {
 	border-bottom: 2px solid #00987e;
 }
-nav a, blockquote a {
+nav a, blockquote a, a {
 	text-decoration: none;
 }
 /*-----------------------3.0 CONTENT-------------------------*/
@@ -170,7 +169,7 @@ nav a, blockquote a {
 	right: 100px;
 }
 #hero {
-	margin-bottom: 150px;
+	margin-bottom: 100px;
 }
 #products, #about {
 	margin-bottom: 150px;
@@ -187,7 +186,31 @@ nav a, blockquote a {
 
 /*-----------------------5.0 UTILITY-------------------------*/
 /*--------5.1 Text Sizes---------*/
+
+nav li, .origin, #about span {
+	font-size: .8rem;
+	line-height: 1rem;
+}
+#hero span, blockquote p {
+	font-size: 3.3rem;
+}
+#about p a {
+	font-size: 1.2rem;
+}
 /*--------5.2 Colors-----------*/
+
+#hero span, blockquote p, blockquote a, #about p a {
+	color: #8da382;
+}
+nav a, p, h4, #hero a, #products a {
+	color: #4d4c4c;
+}
+h3, h2 {
+	color: #b1d144;
+}
+#about p a:hover {
+	color: #00987e;
+}
 /*--------5.3 Alignments----------*/
 
 #hero h3, #about h2 {
@@ -199,8 +222,20 @@ nav a, blockquote a {
 #about .col-1-2 {
 	margin-right: 50px;
 }
-#products figure {
+#products figure, #about figure {
 	margin-left: 0;
+}
+.txt-center {
+	text-align: center;
+}
+.flexbox {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+.flexbox {
+  flex: 1;
 }
 
 
@@ -240,6 +275,7 @@ img {
 }
 .col-2-3 {
 	width: 66.66%;
+	float: none;
 	margin: 0 auto;
 }
 .col-1-4 {
@@ -320,6 +356,8 @@ img {
 .col-9-12 {
 	width: 74.97%;
 	position: relative;
+	float: none;
+	margin: 0 auto;
 }
 
 @media screen and (max-width:480px) {
