@@ -74,7 +74,7 @@ blockquote p {
 	line-height: 4.5rem;
 	margin: 20px;
 }
-blockquote p, blockquote a, #shipping {
+blockquote p, blockquote a {
 	text-align: center;
 }
 .origin {
@@ -83,7 +83,6 @@ blockquote p, blockquote a, #shipping {
 }
 #shipping {
 	line-height: 2rem;
-	text-align: center;
 	margin-top: 50px;
 }
 #about p {
@@ -94,15 +93,19 @@ blockquote p, blockquote a, #shipping {
 }
 /*--------1.3 Buttons----------*/
 
-#hero a, #products a {
+#hero a, #products a, form a {
 	border: 1px solid #00987e;
 	padding: 5px 20px;
 }
-#hero a:hover, #products a:hover {
+#hero a:hover, #products a:hover, form a:hover {
 	color: #fff;
 	background-color: #00987e;
 }
 #hero a {
+	margin-top: 25px;
+}
+
+form a {
 	margin-top: 25px;
 }
 /*--------1.4 Forms-----------*/
@@ -110,9 +113,25 @@ blockquote p, blockquote a, #shipping {
 label {
 	display: none;
 }
-input {
+input, textarea {
 	border: none;
 	border-bottom: 2px solid #4d4c4c;
+}
+#about input {
+	padding-right: 150px;
+}
+#connect input {
+	padding-right: 100px;
+}
+#connect form input:first-child {
+	margin-right: 25px;
+}
+textarea {
+	padding-right: 350px;
+    margin-top: 40px;
+}
+#connect form a {
+	margin-top: 25px;
 }
 /*--------1.5 Lists-----------*/
 
@@ -202,13 +221,13 @@ nav li, .origin, #about span {
 #hero span, blockquote p, blockquote a, #about p a {
 	color: #8da382;
 }
-nav a, p, h4, #hero a, #products a {
+nav a, p, h4, #hero a, #products a, form a {
 	color: #4d4c4c;
 }
 h3, h2 {
 	color: #b1d144;
 }
-#about p a:hover {
+#about p a:hover, blockquote a:hover {
 	color: #00987e;
 }
 /*--------5.3 Alignments----------*/
@@ -222,22 +241,19 @@ h3, h2 {
 #about .col-1-2 {
 	margin-right: 50px;
 }
-#products figure, #about figure {
+#products figure {
 	margin-left: 0;
 }
 .txt-center {
 	text-align: center;
 }
-.flexbox {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
+#about figure {
+	margin: 0 auto;
 }
-.flexbox {
-  flex: 1;
+#connect ul {
+	padding-left: 0;
+	margin: 25px 0px;
 }
-
 
 *, *:after, *:before {
 	-webkit-box-sizing: border-box;
@@ -275,8 +291,6 @@ img {
 }
 .col-2-3 {
 	width: 66.66%;
-	float: none;
-	margin: 0 auto;
 }
 .col-1-4 {
 	width: 25%;
@@ -288,10 +302,10 @@ img {
 	width: 20%;
 }
 .col-3-5 {
-	width: 60%
+	width: 60%;
 }
 .col-2-5 {
-	width: 40%
+	width: 40%;
 }
 .col-1-6 {
 	width: 16.66%;
@@ -356,6 +370,9 @@ img {
 .col-9-12 {
 	width: 74.97%;
 	position: relative;
+}
+
+.col-2-5, .col-9-12, .col-2-3 {
 	float: none;
 	margin: 0 auto;
 }
@@ -465,13 +482,18 @@ blockquote p {
 }
 #shipping {
 	line-height: 1.7rem;
-	text-align: left;
 }
 #about p {
 	line-height: 1.8rem;
 }
 
 /*--------1.3 Buttons----------*/
+
+#products a, form a {
+	border: 1px solid #00987e;
+	padding: 5px 20px;
+	font-size: .9rem;
+}
 /*--------1.4 Forms-----------*/
 /*--------1.5 Lists-----------*/
 
@@ -530,10 +552,13 @@ blockquote {
 	bottom: 80px;
 	right: 30px;
 }
-#logo {
-	margin: 0 auto;
+#connect .col-1-2 {
+	margin-top: 100px;
 }
-
+#connect form input, #connect form textarea {
+	padding-right: 150px;
+	margin: 25px 0px;
+}
 
 
 
