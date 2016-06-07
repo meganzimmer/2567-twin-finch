@@ -110,12 +110,10 @@ form a {
 }
 /*--------1.4 Forms-----------*/
 
-label {
-	display: none;
-}
 input, textarea {
 	border: none;
 	border-bottom: 2px solid #4d4c4c;
+	outline: none;
 }
 #about input {
 	padding-right: 150px;
@@ -129,6 +127,7 @@ input, textarea {
 textarea {
 	padding-right: 350px;
     margin-top: 40px;
+	resize: none;
 }
 #connect form a {
 	margin-top: 25px;
@@ -173,7 +172,11 @@ nav a, blockquote a, a {
 
 /*--------3.1 Site Structure---------*/
 
-#products h2 {
+.block-center {
+	margin: 0 auto;
+	float: none;
+}
+#products h2, label {
 	display: none;
 }
 #position-one {
@@ -198,63 +201,6 @@ nav a, blockquote a, a {
 	width: 100%;
 	height: 400px;
 }
-/*--------3.2 Site Header-----------*/
-
-
-/*--------3.3 Site Footer----------*/
-
-/*-----------------------5.0 UTILITY-------------------------*/
-/*--------5.1 Text Sizes---------*/
-
-nav li, .origin, #about span {
-	font-size: .8rem;
-	line-height: 1rem;
-}
-#hero span, blockquote p {
-	font-size: 3.3rem;
-}
-#about p a {
-	font-size: 1.2rem;
-}
-/*--------5.2 Colors-----------*/
-
-#hero span, blockquote p, blockquote a, #about p a {
-	color: #8da382;
-}
-nav a, p, h4, #hero a, #products a, form a {
-	color: #4d4c4c;
-}
-h3, h2 {
-	color: #b1d144;
-}
-#about p a:hover, blockquote a:hover {
-	color: #00987e;
-}
-/*--------5.3 Alignments----------*/
-
-#hero h3, #about h2 {
-	margin-bottom: 0;
-}
-.m-t-md-neg {
-	margin-top: -30px;
-}
-#about .col-1-2 {
-	margin-right: 50px;
-}
-#products figure {
-	margin-left: 0;
-}
-.txt-center {
-	text-align: center;
-}
-#about figure {
-	margin: 0 auto;
-}
-#connect ul {
-	padding-left: 0;
-	margin: 25px 0px;
-}
-
 *, *:after, *:before {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -330,6 +276,7 @@ img {
 }
 .col-3-8 {
 	width: 37.5%;
+	margin-left: 50px;
 }
 .col-5-8 {
 	width: 62.5%;
@@ -377,7 +324,68 @@ img {
 	margin: 0 auto;
 }
 
-@media screen and (max-width:480px) {
+
+/*--------3.2 Site Header-----------*/
+
+
+/*--------3.3 Site Footer----------*/
+
+/*-----------------------5.0 UTILITY-------------------------*/
+/*--------5.1 Text Sizes---------*/
+
+nav li, .origin, #about span {
+	font-size: .8rem;
+	line-height: 1rem;
+}
+#hero span, blockquote p {
+	font-size: 3.3rem;
+}
+#about p a {
+	font-size: 1.2rem;
+}
+/*--------5.2 Colors-----------*/
+
+#hero span, blockquote p, blockquote a, #about p a {
+	color: #8da382;
+}
+nav a, p, h4, #hero a, #products a, form a {
+	color: #4d4c4c;
+}
+h3, h2 {
+	color: #b1d144;
+}
+#about p a:hover, blockquote a:hover {
+	color: #00987e;
+}
+/*--------5.3 Alignments----------*/
+
+#hero h3, #about h2 {
+	margin-bottom: 0;
+}
+.m-t-md-neg {
+	margin-top: -30px;
+}
+#products figure {
+	margin-left: 0;
+}
+.txt-center {
+	text-align: center;
+}
+#about figure {
+	margin: 0 auto;
+}
+#connect ul {
+	padding-left: 0;
+	margin: 25px 0px;
+}
+.block-center {
+	margin: 0 auto;
+	float: none;
+	padding-top: 75px;
+}
+
+
+@media screen and (max-width:768px) {
 	/*--------------------------------------------------------------
 
 >>> TABLE OF CONTENTS:
@@ -464,6 +472,7 @@ body {
 /*--------1.1 Headings---------*/
 h1 {
 	margin-bottom: -20px;
+	text-align: center;
 }
 #hero h3 {
 	font-size: 2rem;
@@ -503,8 +512,13 @@ nav li:first-child {
 	margin-left: 0;
 }
 nav li {
-	margin-top: 0;
-	margin-bottom: 25px;
+	margin: 0 65px 25px 0;
+}
+nav ul {
+	padding-left: 0;
+}
+nav li:last-child {
+	margin-right: 0;
 }
 /*-----------------------3.0 CONTENT-------------------------*/
 
